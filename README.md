@@ -14,3 +14,20 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
+
+🚀 Ammar J Mahmood
+🎓 Mechatronics Engineering
+🔧 Hardware & Software Developer | Robotics & AI Enthusiast
+✈️ Private Pilot & Glider Pilot | Bilingual (French, English)
+
+🔥 About Me
+🤖 Passionate about robotics, AI, and embedded systems
+🏆 Built award-winning full-stack applications and designed battle robots
+🛠 Skilled in Python, C++, Docker, TensorFlow, AWS, Git, PCB Design, 3D Printing
+🔍 Always experimenting with AI + Robotics
+🎸 3D-printing Enthousiast
+
+📫 Contact Me
+📧 ammarjmahmood@gmail.com
+💼 LinkedIn
+💻 GitHub
