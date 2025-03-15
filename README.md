@@ -59,11 +59,6 @@ A **custom-designed security system** with **RFID/NFC access**, featuring **web-
 
 ---
 
-### ⚡ Fun Facts  
-💡 Certified **Private & Glider Pilot** ✈️  
-🎸 3D Printing **Music Instruments & Custom Designs**  
-🧠 Always **learning, building, and optimizing**  
-
 <p align="center">
   🚀 "Engineering is about pushing boundaries—one line of code and one circuit at a time." ⚙️
 </p>
