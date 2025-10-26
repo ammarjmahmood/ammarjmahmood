@@ -26,9 +26,6 @@ A **machine-learning-powered robotic arm with custom end effector**, featuring *
 ⚔️ *1lb Battle Bot** *(Private Repository)*  
 A **competition-ready combat robot**, featuring an optimized **weapon system** and **reinforced chassis** for maximum impact.  
 
-🎸 **3D Printed Ukulele**  
-A **fully functional ukulele**, soon to feature **LEDs, amp connectivity, and interactive learning technology**.  
-
 🔒 **ESP32 Remote Door Lock**  
 A **custom-designed security system** with **RFID/NFC access**, featuring **web-based remote controls**.  
 
