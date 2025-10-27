@@ -7,30 +7,11 @@
 ---
 
 ### 🚀 About Me  
-🛠 Passionate about **Robotics, AI, and Embedded Systems**  
-🏆 **Award-winning** full-stack developer & battle robot designer  
+🛠 Passionate about **Robotics, AI, ML, and Embedded Systems**  
+🏆 Dull-stack developer & battle robot designer  
 💡 Constantly experimenting with **AI, 3D Printing, and IoT**  
 🔬 Robotics Research Assistant | 🔧 Full-Stack Developer | ⚙️ University Robotics Captain & Avionics Team  
 🎸 3D Printing Enthusiast | 🚀 Aspiring Space Innovator  
-
----
-
-### 📌 Featured Projects  
-
-🔥 **[3D Printed Robotic Hand](https://www.youtube.com/watch?v=ToPGLrrCLG0&ab_channel=newbotics)**  
-A **machine-learning-powered robotic hand**, featuring **precision 3D-printed parts** and **servo-controlled articulation**.  
-
-🔥 **[3D Printed Robotic Arm](Link Coming Soon..)**  
-A **machine-learning-powered robotic arm with custom end effector**, featuring **precision 3D-printed parts** and **servo-controlled articulation**.
-
-⚔️ *1lb Battle Bot** *(Private Repository)*  
-A **competition-ready combat robot**, featuring an optimized **weapon system** and **reinforced chassis** for maximum impact.  
-
-🔒 **ESP32 Remote Door Lock**  
-A **custom-designed security system** with **RFID/NFC access**, featuring **web-based remote controls**.  
-
-🛠 **IKEA Skadis CAD Attachments**  
-**3D-printed custom attachments** for enhanced workspace organization.  
 
 ---
 
