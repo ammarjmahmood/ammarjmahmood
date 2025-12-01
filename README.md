@@ -8,10 +8,9 @@
 
 ### 🚀 About Me  
 🛠 Passionate about **Robotics, AI, ML, and Embedded Systems**  
-🏆 Dull-stack developer & battle robot designer  
 💡 Constantly experimenting with **AI, 3D Printing, and IoT**  
-🔬 Robotics Research Assistant | 🔧 Full-Stack Developer | ⚙️ University Robotics Captain & Avionics Team  
-🎸 3D Printing Enthusiast | 🚀 Aspiring Space Innovator  
+🔬 Robotics Research | 🔧 Full-Stack Developer | ⚙️ University Robotics Captain & Avionics Team  
+🎸 3D Printing Enthusiast
 
 ---
 
