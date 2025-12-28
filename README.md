@@ -46,7 +46,7 @@
 ### 📫 Contact Me  
 📧 **Email:** ammarjmahmood@gmail.com  
 💼 **LinkedIn:** [linkedin.com/in/ammar-mahmood](https://linkedin.com/in/ammar-mahmood)  
-💻 **GitHub:** [github.com/ammarjmahmood](https://github.com/ammarjmahmood)  
+💻 **Portfolio Website:** [ammarjmahmood.me](https://ammarjmahmood.me)  
 
 ---
 
