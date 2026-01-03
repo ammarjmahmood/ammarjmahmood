@@ -9,7 +9,7 @@
 ### 🚀 About Me  
 🛠 Passionate about **Robotics, AI, ML, and Embedded Systems**  
 💡 Constantly experimenting with **AI, 3D Printing, and IoT**  
-🔬 Robotics Research | 🔧 Full-Stack Developer | ⚙️ University Robotics Captain & Avionics Team  
+🔬 Robotics Research | 🔧 ML Intern @ Autodesk 
 🎸 3D Printing Enthusiast
 
 ---
