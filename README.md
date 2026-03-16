@@ -10,7 +10,7 @@
 </div>
 
 <br/>
-```python
+```
 ammar = {
     "role":     ["ML Intern @ Autodesk", "Robotics Researcher", "Private & Glider Pilot ✈️"],
     "studying": "Mechatronics Engineering @ TMU",
@@ -19,7 +19,6 @@ ammar = {
     "fun_fact":  "I debug circuits the same way I debug code — methodically and with too much coffee ☕"
 }
 ```
-
 <br/>
 
 ## 🛠️ Tech Stack
