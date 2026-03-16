@@ -14,9 +14,7 @@
 ammar = {
     "role":     ["ML Intern @ Autodesk", "Robotics Researcher", "Private & Glider Pilot ✈️"],
     "studying": "Mechatronics Engineering @ TMU",
-    "building": ["Robotics systems", "AI/ML pipelines", "Embedded hardware"],
-    "interests": ["Robotics", "LLMs", "3D Printing", "IoT", "CAD"],
-    "fun_fact":  "I debug circuits the same way I debug code — methodically and with too much coffee ☕"
+    ...
 }
 ```
 
