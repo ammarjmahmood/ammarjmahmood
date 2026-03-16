@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=180&section=header&text=Ammar%20J%20Mahmood&fontSize=42&fontColor=fff&animation=twinkling&fontAlignY=32&desc=Mechatronics%20Engineer%20%7C%20Robotics%20%26%20AI%20%7C%20Private%20%26%20Glider%20Pilot&descAlignY=62&descSize=16"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=180&amp;section=header&amp;text=Ammar%20J%20Mahmood&amp;fontSize=42&amp;fontColor=fff&amp;animation=twinkling&amp;fontAlignY=32&amp;desc=Mechatronics%20Engineer%20%7C%20Robotics%20%26%20AI%20%7C%20Private%20%26%20Glider%20Pilot&amp;descAlignY=62&amp;descSize=16"/>
 </div>
 
 <div align="center">
@@ -69,5 +69,5 @@ ammar = {
 </div>
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=100&amp;section=footer"/>
 </div>
