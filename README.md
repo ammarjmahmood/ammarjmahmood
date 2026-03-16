@@ -1,6 +1,4 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&amp;color=gradient&amp;customColorList=6,11,20&amp;height=180&amp;section=header&amp;text=Ammar%20J%20Mahmood&amp;fontSize=42&amp;fontColor=fff&amp;animation=twinkling&amp;fontAlignY=32&amp;desc=Mechatronics%20Engineer%20%7C%20Robotics%20%26%20AI%20%7C%20Private%20%26%20Glider%20Pilot&amp;descAlignY=62&amp;descSize=16"/>
-</div>
 
 <div align="center">
   <a href="https://linkedin.com/in/ammar-mahmood"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"/></a>
@@ -8,16 +6,6 @@
   <a href="https://ammarjmahmood.me"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&amp;logo=vercel&amp;logoColor=white"/></a>
   <img src="https://komarev.com/ghpvc/?username=ammarjmahmood&amp;style=for-the-badge&amp;color=blueviolet" alt="Profile Views"/>
 </div>
-
-```python
-ammar = {
-    "role":     ["ML Intern @ Autodesk", "Robotics Researcher", "Private & Glider Pilot ✈️"],
-    "studying": "Mechatronics Engineering @ TMU",
-    "building": ["Robotics systems", "AI/ML pipelines", "Embedded hardware"],
-    "interests": ["Robotics", "LLMs", "3D Printing", "IoT", "CAD"],
-    "fun_fact":  "I debug circuits the same way I debug code — methodically and with too much coffee ☕"
-}
-```
 
 ## 🛠️ Tech Stack
 
