@@ -14,7 +14,9 @@
 ammar = {
     "role":     ["ML Intern @ Autodesk", "Robotics Researcher", "Private & Glider Pilot ✈️"],
     "studying": "Mechatronics Engineering @ TMU",
-    ...
+    "building": ["Robotics systems", "AI/ML pipelines", "Embedded hardware"],
+    "interests": ["Robotics", "LLMs", "3D Printing", "IoT", "CAD"],
+    "fun_fact":  "I debug circuits the same way I debug code — methodically and with too much coffee ☕"
 }
 ```
 
@@ -52,7 +54,7 @@ ammar = {
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=ammarjmahmood&show_icons=true&theme=tokyonight&hide_border=true&include_all_commits=true&count_private=true&rank_icon=github" height="180"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ammarjmahmood&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="180"/>
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ammarjmahmood&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&count_private=true" height="180"/>
 </div>
 
 <div align="center">
