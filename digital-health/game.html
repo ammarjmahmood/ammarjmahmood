@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<!--
+    game.html
+    Mind Matters: Digital Health & You
+    Interactive game page — "Mind Guard" canvas game.
+
+    Challenge Feature #1: Embedded Widget (interactive game).
+    Players catch healthy habits and dodge harmful digital behaviours.
+    The game reinforces the educational themes of the site in an
+    engaging, memorable way.
+
+    Author  : Ammar Mahmood
+    Course  : ICS3U
+    Date    : March 2025
+    Topic   : Mental and Emotional Health Concerns Related to Digital Technology
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Guard Game | Mind Matters</title>
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Page-specific styles for the game layout -->
+    <style>
+        /* Centering wrapper for canvas and controls */
+        .game-section {
+            background: linear-gradient(160deg, #0D1B33 0%, #1B2A4A 60%, #0D1B33 100%);
+            padding: 56px 0;
+            min-height: 80vh;
+        }
+
+        /* Message overlay displayed over canvas on start/game over */
+        #game-message {
+            position: absolute;
+            inset: 0;
+            background: rgba(11, 17, 35, 0.88);
+            border-radius: var(--radius);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 32px;
+            z-index: 10;
+        }
+
+        #game-message h2 {
+            color: var(--white);
+            font-size: 1.8rem;
+            margin-bottom: 14px;
+        }
+
+        #game-message p {
+            color: rgba(255,255,255,0.75);
+            font-size: 0.92rem;
+            max-width: 400px;
+            margin-bottom: 24px;
+            line-height: 1.65;
+        }
+
+        /* Canvas container — relative so overlay can be positioned inside */
+        .canvas-container {
+            position: relative;
+            display: inline-block;
+            border-radius: var(--radius);
+        }
+
+        /* On-screen movement buttons for touch / non-keyboard users */
+        .game-controls {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 16px;
+        }
+
+        .ctrl-btn {
+            background: rgba(255,255,255,0.10);
+            border: 2px solid rgba(255,255,255,0.20);
+            color: var(--white);
+            font-size: 1.6rem;
+            padding: 14px 28px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: background var(--transition), transform var(--transition);
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .ctrl-btn:hover,
+        .ctrl-btn:active {
+            background: rgba(56,178,172,0.30);
+            transform: scale(1.05);
+        }
+
+        /* How-to legend below the game */
+        .legend {
+            display: flex;
+            gap: 28px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+
+        .legend-group {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.10);
+            border-radius: var(--radius-sm);
+            padding: 14px 20px;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .legend-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 8px;
+        }
+
+        .legend-title.good  { color: #38A169; }
+        .legend-title.bad   { color: #E53E3E; }
+
+        .legend-items {
+            font-size: 1.4rem;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     SITE HEADER & NAVIGATION
+     ============================================================ -->
+<header class="site-header">
+    <div class="container">
+        <nav class="nav-inner" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo" aria-label="Mind Matters home">
+                🧠 Mind<span>Matters</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="issues.html">The Issues</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="help.html">Get Help</a></li>
+                <li><a href="game.html">Mind Guard</a></li>
+                <li><a href="sources.html">Works Cited</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ============================================================
+     PAGE HERO
+     ============================================================ -->
+<section class="hero-inner" aria-label="Page header">
+    <div class="container">
+        <span class="tag tag-teal" style="margin-bottom:14px;">Interactive Widget</span>
+        <h1>Mind Guard 🧠</h1>
+        <p>
+            Navigate daily life in the digital age. Catch the habits that
+            strengthen mental health and dodge the digital dangers that erode it.
+            How long can you keep your mental health bar full?
+        </p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     GAME SECTION
+     Challenge Feature: Embedded Widget (interactive canvas game)
+     ============================================================ -->
+<section class="game-section" aria-label="Mind Guard interactive game">
+    <div class="container">
+
+        <!-- HUD — score, health, level — updated live by game.js -->
+        <div class="game-hud" style="max-width:640px; margin:0 auto 20px;" aria-label="Game status">
+            <div class="hud-item">
+                <div class="hud-label">Score</div>
+                <div class="hud-value score" id="hud-score">0</div>
+            </div>
+            <div class="hud-item">
+                <div class="hud-label">Mental Health</div>
+                <div class="hud-value health" id="hud-health">❤️❤️❤️❤️❤️</div>
+            </div>
+            <div class="hud-item">
+                <div class="hud-label">Level</div>
+                <div class="hud-value level" id="hud-level">1</div>
+            </div>
+        </div>
+
+        <!-- Canvas container — relative parent for the overlay message -->
+        <div style="display:flex; justify-content:center;">
+            <div class="canvas-container">
+
+                <!-- The game canvas — all drawing done in game.js -->
+                <canvas id="game-canvas" aria-label="Mind Guard game canvas" tabindex="0"></canvas>
+
+                <!-- Overlay: shown on game start and game over -->
+                <div id="game-message" role="dialog" aria-live="polite" aria-labelledby="msg-title">
+                    <div style="font-size:3rem; margin-bottom:12px;">🧠</div>
+                    <h2 id="msg-title">Mind Guard</h2>
+                    <p id="msg-body">
+                        Loading game...
+                    </p>
+                    <button id="msg-btn" class="btn btn-teal" style="font-size:1rem; padding:14px 36px;">
+                        Start Game
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- On-screen directional buttons (keyboard alternative for touch users) -->
+        <div class="game-controls" aria-label="On-screen movement controls">
+            <button class="ctrl-btn" id="btn-left" aria-label="Move left">&#8592; Left</button>
+            <button class="ctrl-btn" id="btn-right" aria-label="Move right">Right &#8594;</button>
+        </div>
+
+        <!-- Item legend — explains what each emoji means -->
+        <div class="legend" aria-label="Game item legend">
+            <div class="legend-group">
+                <div class="legend-title good">✅ Catch — Good Habits (+10 pts)</div>
+                <div class="legend-items">📚 🏃 😴 🤝 🎨</div>
+                <div style="font-size:0.75rem; color:rgba(255,255,255,0.45); margin-top:6px;">
+                    Reading · Exercise · Sleep · Friends · Creativity
+                </div>
+            </div>
+            <div class="legend-group">
+                <div class="legend-title bad">⛔ Avoid — Digital Harms (−1 health)</div>
+                <div class="legend-items">📵 😤 🎮 😰 🌙</div>
+                <div style="font-size:0.75rem; color:rgba(255,255,255,0.45); margin-top:6px;">
+                    Doomscrolling · Cyberbullying · Excess Gaming · FOMO · Late-night Screen
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- ============================================================
+     EDUCATIONAL TIE-IN BELOW GAME
+     Connects game content back to the website's educational topic.
+     ============================================================ -->
+<section class="section" aria-labelledby="game-learn-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="game-learn-heading">The Game Behind the Game</h2>
+            <div class="section-divider"></div>
+            <p>
+                Each item in Mind Guard represents a real, researched influence on mental health.
+                The game is a simplified model of the choices people make every day.
+            </p>
+        </div>
+
+        <div class="grid-2">
+
+            <!-- Good habits explained -->
+            <div class="card">
+                <span class="tag tag-teal" style="margin-bottom:12px;">Good Habits to Collect</span>
+                <table style="width:100%; border-collapse:collapse; font-size:0.90rem;">
+                    <thead>
+                        <tr style="background:var(--light);">
+                            <th style="padding:8px 10px; text-align:left; color:var(--navy);">Item</th>
+                            <th style="padding:8px 10px; text-align:left; color:var(--navy);">Habit</th>
+                            <th style="padding:8px 10px; text-align:left; color:var(--navy);">Why It Helps</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">📚</td>
+                            <td style="padding:8px 10px;">Reading</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Builds focus, reduces stress, screen-free</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">🏃</td>
+                            <td style="padding:8px 10px;">Exercise</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Proven treatment for anxiety and depression</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">😴</td>
+                            <td style="padding:8px 10px;">Good Sleep</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Regulates emotions, improves cognition</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">🤝</td>
+                            <td style="padding:8px 10px;">In-Person Friends</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Strongest predictor of long-term wellbeing</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">🎨</td>
+                            <td style="padding:8px 10px;">Creativity</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Builds self-expression, reduces rumination</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Bad habits explained -->
+            <div class="card">
+                <span class="tag tag-red" style="margin-bottom:12px;">Harmful Habits to Dodge</span>
+                <table style="width:100%; border-collapse:collapse; font-size:0.90rem;">
+                    <thead>
+                        <tr style="background:var(--light);">
+                            <th style="padding:8px 10px; text-align:left; color:var(--navy);">Item</th>
+                            <th style="padding:8px 10px; text-align:left; color:var(--navy);">Habit</th>
+                            <th style="padding:8px 10px; text-align:left; color:var(--navy);">Why It Hurts</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">📵</td>
+                            <td style="padding:8px 10px;">Doomscrolling</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Increases anxiety, disrupts sleep</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">😤</td>
+                            <td style="padding:8px 10px;">Cyberbullying</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Causes severe emotional distress</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">🎮</td>
+                            <td style="padding:8px 10px;">Excess Gaming</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Displaces sleep, exercise, socialising</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">😰</td>
+                            <td style="padding:8px 10px;">FOMO</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Drives compulsive checking, anxiety</td>
+                        </tr>
+                        <tr style="border-top:1px solid var(--border);">
+                            <td style="padding:8px 10px;">🌙</td>
+                            <td style="padding:8px 10px;">Late-Night Screens</td>
+                            <td style="padding:8px 10px; color:var(--muted);">Suppresses melatonin, delays sleep</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     CTA: Other pages
+     ============================================================ -->
+<div class="band band-dark" aria-label="Continue exploring">
+    <div class="container">
+        <h2>Ready to Take Action?</h2>
+        <p>Now that the issues are clear, explore the individual solutions that can make a real difference.</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+            <a href="solutions.html" class="btn btn-teal">Individual Solutions</a>
+            <a href="help.html" class="btn btn-outline">Get Help Now</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     SITE FOOTER
+     ============================================================ -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="issues.html">The Issues</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="help.html">Get Help</a></li>
+            <li><a href="game.html">Mind Guard</a></li>
+            <li><a href="sources.html">Works Cited</a></li>
+        </ul>
+        <p>Mind Matters &mdash; ICS3U Digital Issues Website &mdash; 2025</p>
+        <p style="margin-top:6px; font-size:0.80rem;">
+            If you are in crisis, contact the Kids Help Phone: <strong>1-800-668-6868</strong>
+        </p>
+    </div>
+</footer>
+
+
+<!-- No tip bar on game page — avoid distraction during gameplay -->
+
+<!-- Shared JS (nav highlighting, accordions) -->
+<script src="js/main.js"></script>
+<!-- Game-specific JavaScript -->
+<script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<!--
+    issues.html
+    Mind Matters: Digital Health & You
+    The Issues page — in-depth breakdown of each digital mental health concern.
+    Covers: anxiety & depression, social comparison, addictive design, sleep
+    disruption, cyberbullying, reduced attention span, and physical symptoms.
+
+    Author  : Ammar Mahmood
+    Course  : ICS3U
+    Date    : March 2025
+    Topic   : Mental and Emotional Health Concerns Related to Digital Technology
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Issues | Mind Matters</title>
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SITE HEADER & NAVIGATION
+     ============================================================ -->
+<header class="site-header">
+    <div class="container">
+        <nav class="nav-inner" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo" aria-label="Mind Matters home">
+                🧠 Mind<span>Matters</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="issues.html">The Issues</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="help.html">Get Help</a></li>
+                <li><a href="game.html">Mind Guard</a></li>
+                <li><a href="sources.html">Works Cited</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ============================================================
+     PAGE HERO
+     ============================================================ -->
+<section class="hero-inner" aria-label="Page header">
+    <div class="container">
+        <span class="tag tag-red" style="margin-bottom:14px;">The Problems</span>
+        <h1>Digital Habits &amp; Mental Health: The Issues</h1>
+        <p>
+            Understanding the specific ways that digital technology harms mental
+            wellbeing is the first step toward addressing those harms. This page
+            examines the evidence behind each major concern.
+        </p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     INTRODUCTORY CONTEXT
+     ============================================================ -->
+<section class="section" aria-labelledby="intro-heading">
+    <div class="container">
+        <div class="grid-2">
+
+            <!-- Left: explanatory text -->
+            <div>
+                <h2 id="intro-heading">A Growing Mental Health Crisis</h2>
+                <div class="section-divider" style="margin:12px 0 20px 0;"></div>
+                <p>
+                    The rise of smartphones and social media has coincided with a
+                    sharp increase in reported rates of depression, anxiety, and
+                    self-harm among adolescents worldwide. In Canada, Statistics
+                    Canada's 2024 report on digital health found that youth aged
+                    12–17 who exceeded 4 hours of daily recreational screen time
+                    reported significantly lower life satisfaction scores.
+                </p>
+                <p>
+                    Importantly, these effects are not random — they are the
+                    predictable result of systems <em>designed</em> to maximise
+                    the time users spend on them, regardless of whether that time
+                    is beneficial. Technology companies employ hundreds of
+                    behavioural psychologists to make their products as engaging
+                    as possible.
+                </p>
+                <div class="callout danger">
+                    <p class="callout-title">A note on correlation and causation</p>
+                    <p>
+                        Much of the research in this area shows correlation, not
+                        proven causation. However, the consistency of findings
+                        across dozens of independent studies — combined with
+                        documented mechanisms (e.g., dopamine-driven notification
+                        loops) — provides strong grounds for concern.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right: bar chart visualising screen time vs. mental health outcomes -->
+            <div class="chart-container">
+                <h4>Screen Time vs. Self-Reported Wellbeing (Canadian Youth, 2024)</h4>
+
+                <!-- Bar chart built with progress bars — animated on scroll -->
+                <div class="progress-group">
+                    <div class="progress-label">
+                        <span>Under 1 hr/day</span>
+                        <span>High wellbeing: 78%</span>
+                    </div>
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill teal" style="width:78%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-group">
+                    <div class="progress-label">
+                        <span>1–2 hrs/day</span>
+                        <span>High wellbeing: 65%</span>
+                    </div>
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill" style="width:65%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-group">
+                    <div class="progress-label">
+                        <span>3–4 hrs/day</span>
+                        <span>High wellbeing: 48%</span>
+                    </div>
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill yellow" style="width:48%;"></div>
+                    </div>
+                </div>
+
+                <div class="progress-group">
+                    <div class="progress-label">
+                        <span>5+ hrs/day</span>
+                        <span>High wellbeing: 31%</span>
+                    </div>
+                    <div class="progress-bar-track">
+                        <div class="progress-bar-fill red" style="width:31%;"></div>
+                    </div>
+                </div>
+
+                <p style="font-size:0.78rem; color:var(--muted); margin-top:16px;">
+                    Source: Statistics Canada, "Screen time and mental health of Canadians," 2024 (adapted).
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     FLIP CARDS — Major Issues Overview
+     Mouseover / hover effect: cards flip to reveal research stat.
+     ============================================================ -->
+<section class="section" style="background:var(--light);" aria-labelledby="issues-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="issues-heading">The Six Major Concerns</h2>
+            <div class="section-divider"></div>
+            <p>Hover over each card to reveal the research finding behind the issue.</p>
+        </div>
+
+        <!-- Row 1 of flip cards -->
+        <div class="grid-3" style="margin-bottom:28px;">
+
+            <!-- Flip Card 1: Anxiety & Depression -->
+            <div class="flip-card" aria-label="Anxiety and depression — hover for research stat">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <span style="font-size:2.4rem;">😰</span>
+                        <h3 style="margin-top:14px; font-size:1.1rem;">Anxiety &amp; Depression</h3>
+                        <p style="font-size:0.85rem; color:var(--muted); margin-top:8px;">
+                            Heavy digital consumption is linked to measurably higher rates of anxiety
+                            and depression, especially among adolescents.
+                        </p>
+                    </div>
+                    <div class="flip-back">
+                        <span class="flip-stat">70%</span>
+                        <p>
+                            Adolescents who use screens for 5+ hours daily are
+                            <strong>70% more likely</strong> to have suicidal
+                            thoughts or actions compared to those who use screens
+                            under 1 hour per day.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flip Card 2: Social Comparison -->
+            <div class="flip-card" aria-label="Social comparison — hover for research stat">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <span style="font-size:2.4rem;">📸</span>
+                        <h3 style="margin-top:14px; font-size:1.1rem;">Social Comparison</h3>
+                        <p style="font-size:0.85rem; color:var(--muted); margin-top:8px;">
+                            Social media creates a constant stream of curated, idealised
+                            images that drive harmful comparisons and body image issues.
+                        </p>
+                    </div>
+                    <div class="flip-back">
+                        <span class="flip-stat">11%</span>
+                        <p>
+                            Roughly <strong>11% of Canadian teens</strong> show
+                            signs of problematic social media use — with girls
+                            reporting significantly higher rates of body image
+                            concerns linked to social comparison.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flip Card 3: Addictive Design -->
+            <div class="flip-card" aria-label="Addictive design — hover for research stat">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <span style="font-size:2.4rem;">🔄</span>
+                        <h3 style="margin-top:14px; font-size:1.1rem;">Addictive Design</h3>
+                        <p style="font-size:0.85rem; color:var(--muted); margin-top:8px;">
+                            Platforms use variable reward schedules — the same
+                            mechanism behind slot machines — to create compulsive
+                            checking behaviours and FOMO.
+                        </p>
+                    </div>
+                    <div class="flip-back">
+                        <span class="flip-stat">2.5×</span>
+                        <p>
+                            Users who receive unpredictable (variable) notifications
+                            check their phones up to <strong>2.5 times more often</strong>
+                            than those who receive notifications on a fixed schedule —
+                            the same principle used in gambling.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2 of flip cards -->
+        <div class="grid-3">
+
+            <!-- Flip Card 4: Sleep Disruption -->
+            <div class="flip-card" aria-label="Sleep disruption — hover for research stat">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <span style="font-size:2.4rem;">🌙</span>
+                        <h3 style="margin-top:14px; font-size:1.1rem;">Sleep Disruption</h3>
+                        <p style="font-size:0.85rem; color:var(--muted); margin-top:8px;">
+                            Blue light from screens suppresses melatonin; late-night
+                            scrolling delays sleep onset and reduces sleep quality,
+                            worsening mental health.
+                        </p>
+                    </div>
+                    <div class="flip-back">
+                        <span class="flip-stat">1 hr</span>
+                        <p>
+                            Every additional hour of screen use after 9 PM is
+                            associated with going to sleep approximately
+                            <strong>24 minutes later</strong> and reporting
+                            <strong>lower next-day mood</strong> and concentration.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flip Card 5: Cyberbullying -->
+            <div class="flip-card" aria-label="Cyberbullying — hover for research stat">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <span style="font-size:2.4rem;">💬</span>
+                        <h3 style="margin-top:14px; font-size:1.1rem;">Cyberbullying</h3>
+                        <p style="font-size:0.85rem; color:var(--muted); margin-top:8px;">
+                            Online harassment follows victims home. Unlike
+                            in-person bullying it is persistent, often anonymous,
+                            and can involve thousands of witnesses.
+                        </p>
+                    </div>
+                    <div class="flip-back">
+                        <span class="flip-stat">37%</span>
+                        <p>
+                            <strong>37% of young Canadians</strong> aged 15–24
+                            report being cyberbullied. Victims are significantly
+                            more likely to experience depression, anxiety, and
+                            social withdrawal compared to non-victims.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Flip Card 6: Attention Span -->
+            <div class="flip-card" aria-label="Reduced attention span — hover for research stat">
+                <div class="flip-card-inner">
+                    <div class="flip-front">
+                        <span style="font-size:2.4rem;">🧩</span>
+                        <h3 style="margin-top:14px; font-size:1.1rem;">Attention &amp; Focus</h3>
+                        <p style="font-size:0.85rem; color:var(--muted); margin-top:8px;">
+                            Constant notifications and rapid content switching
+                            train the brain to seek frequent stimulation, reducing
+                            the ability to sustain deep focus.
+                        </p>
+                    </div>
+                    <div class="flip-back">
+                        <span class="flip-stat">47 sec</span>
+                        <p>
+                            Research from the University of California, Irvine
+                            found that the average attention span on a digital
+                            screen has fallen to approximately
+                            <strong>47 seconds</strong> — down from 2.5 minutes
+                            in 2004.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     DEEP DIVE ACCORDION SECTION
+     Challenge Feature: Drop-down / pop-up (accordion) elements.
+     Provides detailed information for each issue without
+     overwhelming the page layout.
+     ============================================================ -->
+<section class="section" aria-labelledby="deep-dive-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="deep-dive-heading">Deep Dive: Each Issue Explained</h2>
+            <div class="section-divider"></div>
+            <p>Click any topic below to expand a detailed explanation with real-world context.</p>
+        </div>
+
+        <!-- Accordion group — only one item open at a time -->
+        <div class="accordion-group">
+
+            <!-- Accordion: Anxiety & Depression -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>😰 &nbsp; Anxiety and Depression</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        Research has consistently found a correlation between high digital consumption
+                        and increased levels of anxiety and depression. A landmark 2019 study published
+                        in <em>JAMA Pediatrics</em> tracked 3,826 adolescents over four years and found
+                        that each additional hour of social media use per day was associated with
+                        measurably higher rates of depressive symptoms.
+                    </p>
+                    <p>
+                        The mechanism is multifaceted. Social media promotes social comparison, exposes
+                        users to distressing news and content, and replaces time that might otherwise be
+                        spent on activities (exercise, in-person socialising, sleep) that are known to
+                        protect mental health.
+                    </p>
+                    <ul>
+                        <li>The 70% suicidal-thought increase for 5+ hour users represents an association, not a guarantee — but it is a striking signal.</li>
+                        <li>Girls tend to be more affected than boys, likely due to higher social comparison behaviour on image-based platforms.</li>
+                        <li>Passive scrolling (viewing others' content) is more harmful than active engagement (messaging, commenting).</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accordion: Social Comparison & Self-Esteem -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>📸 &nbsp; Social Comparison and Low Self-Esteem</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        Social media platforms are curated highlight reels. Users typically share
+                        only their best moments — the trip, the outfit, the achievement — leading
+                        others to compare their ordinary daily lives against an unrealistic standard.
+                    </p>
+                    <p>
+                        The impact is most acute for body image. Instagram and TikTok surface
+                        algorithmically amplified content from influencers and filtered photographs
+                        that are often digitally altered. Repeated exposure creates distorted
+                        benchmarks for appearance, lifestyle, and success.
+                    </p>
+                    <ul>
+                        <li>A UK study found that Instagram use among teenage girls was associated with lower body satisfaction scores within two weeks of starting the app.</li>
+                        <li>Envy, inadequacy, and fear of missing out (FOMO) are the primary emotional outcomes of social comparison behaviour.</li>
+                        <li>Unfollowing or muting accounts that trigger negative emotions is a documented and effective individual intervention.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accordion: Addictive Behaviours -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>🔄 &nbsp; Addictive Behaviours and FOMO</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        Technology platforms — particularly social media, short-form video (TikTok,
+                        Reels), and mobile games — are deliberately engineered using principles from
+                        behavioural psychology to maximise engagement. The "pull to refresh" gesture
+                        mimics a slot machine; likes and notifications provide the unpredictable
+                        rewards that drive compulsive checking.
+                    </p>
+                    <p>
+                        Former president of Facebook, Sean Parker, publicly admitted in 2017 that
+                        the platform was built to "consume as much of your time and conscious attention
+                        as possible" by exploiting "a vulnerability in human psychology."
+                    </p>
+                    <ul>
+                        <li>Internet gaming disorder is now recognised by the World Health Organisation as a diagnosable condition.</li>
+                        <li>FOMO (Fear of Missing Out) is a measurable psychological state linked to continuous social media checking.</li>
+                        <li>Excessive gaming can consume 8–12 hours per day, displacing sleep, schoolwork, and in-person relationships.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accordion: Sleep Disruption -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>🌙 &nbsp; Sleep Disruption</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        Sleep is one of the most important pillars of mental health. Chronic sleep
+                        deprivation is independently associated with anxiety, depression, impaired
+                        memory, and reduced emotional regulation. Digital technology disrupts sleep
+                        through two primary mechanisms:
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>Blue light:</strong> Screens emit high-intensity blue wavelength
+                            light that suppresses melatonin production — the hormone that signals to
+                            the brain that it is time to sleep. Using a screen within one hour of
+                            bedtime can delay sleep onset by up to 1.5 hours.
+                        </li>
+                        <li>
+                            <strong>Psychological arousal:</strong> Emotionally engaging content
+                            (social media, news, gaming) activates the stress response system,
+                            making it physiologically harder to fall asleep regardless of the time.
+                        </li>
+                    </ul>
+                    <p>
+                        The Canadian Paediatric Society recommends no screens for at least 1 hour
+                        before bedtime for children and adolescents.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Accordion: Cyberbullying -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>💬 &nbsp; Cyberbullying and Online Harassment</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        Cyberbullying is the use of digital technology to repeatedly harm, harass,
+                        or humiliate another person. Unlike traditional bullying, it can occur
+                        24 hours a day, 7 days a week, reach a wide audience instantly, and may
+                        involve anonymous perpetrators — making it particularly difficult to escape.
+                    </p>
+                    <p>
+                        Documented real-world outcomes of cyberbullying include increased rates of
+                        depression, anxiety, social withdrawal, academic decline, and, in severe
+                        cases, suicide. Several high-profile Canadian cases have resulted in national
+                        conversations about the legal responsibilities of platforms and schools.
+                    </p>
+                    <ul>
+                        <li>Rehtaeh Parsons (Nova Scotia) and Amanda Todd (British Columbia) are two Canadian cases that drew international attention to the lethal potential of online harassment.</li>
+                        <li>Bystanders who share, like, or remain silent contribute to the harm.</li>
+                        <li>Documenting, blocking, and reporting are the three recommended immediate steps for targets.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Accordion: Physical Symptoms -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>👁️ &nbsp; Physical Symptoms: Eyes, Posture, and Pain</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        Mental and physical health are deeply interconnected. Prolonged screen use
+                        produces a cluster of physical symptoms that, in turn, worsen mood and
+                        cognitive performance:
+                    </p>
+                    <ul>
+                        <li><strong>Digital Eye Strain:</strong> Blurred vision, dry eyes, and headaches resulting from reduced blink rate and prolonged near-focus. Affects an estimated 65% of regular screen users.</li>
+                        <li><strong>Neck and Shoulder Pain ("Tech Neck"):</strong> Forward head posture while looking at phones places up to 27 kg of force on the cervical spine at a 45-degree angle.</li>
+                        <li><strong>Sedentary Behaviour:</strong> Extended screen sessions displace physical activity, which is one of the most effective known treatments for anxiety and depression.</li>
+                    </ul>
+                    <p>
+                        The 20-20-20 rule is the recommended intervention for eye strain:
+                        every 20 minutes, look at something 20 feet away for at least 20 seconds.
+                    </p>
+                </div>
+            </div>
+
+        </div><!-- end .accordion-group -->
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SVG INFOGRAPHIC — Prevalence by Age Group
+     Visual chart showing which age groups are most affected.
+     ============================================================ -->
+<section class="section" style="background:var(--white);" aria-labelledby="demo-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="demo-heading">Who is Most Affected?</h2>
+            <div class="section-divider"></div>
+            <p>The impacts of excessive digital use are not evenly distributed across age groups.</p>
+        </div>
+
+        <div class="grid-2">
+
+            <!-- Inline SVG bar chart -->
+            <div class="chart-container">
+                <h4>Percentage Reporting Mental Health Concerns Linked to Digital Use (2024)</h4>
+
+                <!-- SVG horizontal bar chart — no external image needed -->
+                <svg viewBox="0 0 460 220" xmlns="http://www.w3.org/2000/svg"
+                     aria-label="Bar chart showing mental health concern rates by age group"
+                     role="img" style="width:100%; height:auto; margin-top:8px;">
+
+                    <!-- Y-axis labels -->
+                    <text x="10" y="30"  font-size="12" fill="#718096">Ages 10–13</text>
+                    <text x="10" y="70"  font-size="12" fill="#718096">Ages 14–17</text>
+                    <text x="10" y="110" font-size="12" fill="#718096">Ages 18–24</text>
+                    <text x="10" y="150" font-size="12" fill="#718096">Ages 25–34</text>
+                    <text x="10" y="190" font-size="12" fill="#718096">Ages 35–54</text>
+
+                    <!-- Background tracks -->
+                    <rect x="120" y="14" width="310" height="18" rx="4" fill="#EDF2F7"/>
+                    <rect x="120" y="54" width="310" height="18" rx="4" fill="#EDF2F7"/>
+                    <rect x="120" y="94" width="310" height="18" rx="4" fill="#EDF2F7"/>
+                    <rect x="120" y="134" width="310" height="18" rx="4" fill="#EDF2F7"/>
+                    <rect x="120" y="174" width="310" height="18" rx="4" fill="#EDF2F7"/>
+
+                    <!-- Filled bars (proportional to %) -->
+                    <!-- 10–13: 52% -->
+                    <rect x="120" y="14" width="161" height="18" rx="4" fill="#805AD5"/>
+                    <text x="290" y="27" font-size="11" fill="#2D3748" font-weight="bold">52%</text>
+
+                    <!-- 14–17: 68% (highest) -->
+                    <rect x="120" y="54" width="211" height="18" rx="4" fill="#E53E3E"/>
+                    <text x="340" y="67" font-size="11" fill="#2D3748" font-weight="bold">68%</text>
+
+                    <!-- 18–24: 61% -->
+                    <rect x="120" y="94" width="189" height="18" rx="4" fill="#D69E2E"/>
+                    <text x="318" y="107" font-size="11" fill="#2D3748" font-weight="bold">61%</text>
+
+                    <!-- 25–34: 43% -->
+                    <rect x="120" y="134" width="133" height="18" rx="4" fill="#2F7FC1"/>
+                    <text x="262" y="147" font-size="11" fill="#2D3748" font-weight="bold">43%</text>
+
+                    <!-- 35–54: 28% -->
+                    <rect x="120" y="174" width="87" height="18" rx="4" fill="#38B2AC"/>
+                    <text x="216" y="187" font-size="11" fill="#2D3748" font-weight="bold">28%</text>
+
+                </svg>
+
+                <p style="font-size:0.78rem; color:var(--muted); margin-top:8px;">
+                    Source: Statistics Canada / PMC literature review, 2024 (illustrative).
+                </p>
+            </div>
+
+            <!-- Companion text beside chart -->
+            <div>
+                <h3 style="margin-bottom:16px;">Adolescents at the Centre</h3>
+                <p>
+                    The data consistently shows that adolescents aged 14–17 are the most
+                    heavily impacted group. Several factors explain this:
+                </p>
+                <ul style="list-style:disc; padding-left:20px; color:var(--text); font-size:0.92rem; line-height:1.85;">
+                    <li>The teenage brain is still developing, making it more sensitive to dopaminergic reward signals from social media.</li>
+                    <li>Social belonging is critically important developmentally — exclusion or negative social feedback online carries a disproportionate emotional weight.</li>
+                    <li>Teenagers have fewer self-regulation skills and less experience recognising manipulative design patterns.</li>
+                    <li>They typically have more unsupervised screen time than younger children.</li>
+                </ul>
+
+                <div class="callout" style="margin-top:20px;">
+                    <p class="callout-title">Girls vs. Boys</p>
+                    <p>
+                        Research from the National Institutes of Health (PMC, 2024) found that
+                        girls consistently report higher rates of social-media-related anxiety and
+                        depression than boys. Boys show higher rates of gaming-related concerns.
+                        Both patterns are measurable and well-documented.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     TRANSITION CALL TO ACTION
+     ============================================================ -->
+<div class="band band-dark" aria-label="Next page call to action">
+    <div class="container">
+        <h2>These Problems Have Solutions</h2>
+        <p>
+            Understanding the issues is only half the picture. Explore the
+            practical, individual-level steps that can meaningfully reduce
+            the impact of digital technology on mental health.
+        </p>
+        <a href="solutions.html" class="btn btn-teal">View Solutions &rarr;</a>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     SITE FOOTER
+     ============================================================ -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="issues.html">The Issues</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="help.html">Get Help</a></li>
+            <li><a href="game.html">Mind Guard</a></li>
+            <li><a href="sources.html">Works Cited</a></li>
+        </ul>
+        <p>Mind Matters &mdash; ICS3U Digital Issues Website &mdash; 2025</p>
+        <p style="margin-top:6px; font-size:0.80rem;">
+            If you are in crisis, contact the Kids Help Phone: <strong>1-800-668-6868</strong>
+        </p>
+    </div>
+</footer>
+
+
+<!-- Tip bar -->
+<div id="tip-bar" role="complementary" aria-label="Wellness tip">
+    <span class="tip-text">
+        💡 <strong>Did you know?</strong> Passive scrolling is more harmful to mental health than actively communicating with friends online.
+    </span>
+    <button id="tip-bar-close" aria-label="Dismiss tip">✕</button>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

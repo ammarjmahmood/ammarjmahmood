@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--
+    help.html
+    Mind Matters: Digital Health & You
+    Resources page — Canadian crisis lines, counselling directories,
+    self-help tools, and guidance for supporting others.
+
+    Author  : Ammar Mahmood
+    Course  : ICS3U
+    Date    : March 2025
+    Topic   : Mental and Emotional Health Concerns Related to Digital Technology
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Help | Mind Matters</title>
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Page-specific inline styles for the urgency banner and crisis card -->
+    <style>
+        /* Urgency banner at top of page */
+        .crisis-banner {
+            background: var(--red);
+            color: var(--white);
+            padding: 14px 24px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.01em;
+        }
+
+        .crisis-banner a {
+            color: var(--white);
+            text-decoration: underline;
+            font-weight: 800;
+        }
+
+        /* Large featured crisis card */
+        .crisis-card {
+            background: linear-gradient(135deg, var(--navy), var(--navy-light));
+            color: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            text-align: center;
+            box-shadow: var(--shadow-lg);
+            border: 2px solid rgba(56,178,172,0.35);
+        }
+
+        .crisis-card h2 {
+            color: var(--white);
+            margin-bottom: 12px;
+        }
+
+        .crisis-card .crisis-number {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--teal);
+            display: block;
+            margin: 12px 0;
+            letter-spacing: 0.03em;
+        }
+
+        .crisis-card p {
+            color: rgba(255,255,255,0.80);
+            max-width: 540px;
+            margin: 0 auto 20px;
+        }
+
+        /* Category heading dividers */
+        .category-heading {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--navy);
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--teal);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     CRISIS URGENCY BANNER
+     Always visible at top of page regardless of scroll position.
+     ============================================================ -->
+<div class="crisis-banner" role="alert" aria-live="assertive">
+    In immediate distress? Call or text <a href="tel:18006686868">1-800-668-6868</a>
+    (Kids Help Phone) or text <strong>HELLO</strong> to <strong>686868</strong> — available 24/7.
+</div>
+
+
+<!-- ============================================================
+     SITE HEADER & NAVIGATION
+     ============================================================ -->
+<header class="site-header">
+    <div class="container">
+        <nav class="nav-inner" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo" aria-label="Mind Matters home">
+                🧠 Mind<span>Matters</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="issues.html">The Issues</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="help.html">Get Help</a></li>
+                <li><a href="game.html">Mind Guard</a></li>
+                <li><a href="sources.html">Works Cited</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ============================================================
+     PAGE HERO
+     ============================================================ -->
+<section class="hero-inner" aria-label="Page header">
+    <div class="container">
+        <span class="tag tag-teal" style="margin-bottom:14px;">Support Resources</span>
+        <h1>Help Is Available — Right Now</h1>
+        <p>
+            Whether facing a crisis, looking for a counsellor, or trying to
+            support a friend, these Canadian resources are trusted, free (or low-cost),
+            and available whenever needed.
+        </p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     FEATURED CRISIS LINE — KIDS HELP PHONE
+     ============================================================ -->
+<section class="section" aria-labelledby="crisis-heading">
+    <div class="container">
+        <div class="crisis-card">
+            <div style="font-size:3rem; margin-bottom:16px;">📞</div>
+            <h2 id="crisis-heading">Kids Help Phone</h2>
+            <span class="crisis-number">1-800-668-6868</span>
+            <p>
+                Canada's only 24/7 national service offering professional counselling,
+                information, and referrals for young people aged 5–29.
+                Available by phone, text, and live chat in both English and French.
+                Completely confidential and free.
+            </p>
+            <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+                <div style="background:rgba(56,178,172,0.15); border:1px solid rgba(56,178,172,0.4); border-radius:8px; padding:12px 20px; color:var(--white); font-size:0.88rem;">
+                    📱 Text: HELLO to 686868
+                </div>
+                <div style="background:rgba(56,178,172,0.15); border:1px solid rgba(56,178,172,0.4); border-radius:8px; padding:12px 20px; color:var(--white); font-size:0.88rem;">
+                    💬 Chat: kidshelpphone.ca
+                </div>
+                <div style="background:rgba(56,178,172,0.15); border:1px solid rgba(56,178,172,0.4); border-radius:8px; padding:12px 20px; color:var(--white); font-size:0.88rem;">
+                    🌐 Available 24/7
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     ALL RESOURCES — ORGANISED BY CATEGORY
+     ============================================================ -->
+<section class="section" style="background:var(--light); padding-top:0;" aria-labelledby="resources-heading">
+    <div class="container">
+
+        <h2 id="resources-heading" class="section-header" style="text-align:left; margin-bottom:36px;">
+            All Resources
+        </h2>
+
+        <!-- ---- Category: Crisis Lines ---- -->
+        <h3 class="category-heading">🆘 Crisis Lines</h3>
+        <div class="grid-3" style="margin-bottom:48px;">
+
+            <!-- Kids Help Phone -->
+            <div class="help-card">
+                <span class="help-icon">📞</span>
+                <h3>Kids Help Phone</h3>
+                <p>Professional counselling for youth aged 5–29. Confidential and free.</p>
+                <span class="help-number">1-800-668-6868</span>
+                <p>Text HELLO to 686868</p>
+                <span class="tag tag-teal">24/7 — Free</span>
+            </div>
+
+            <!-- Crisis Text Line (Canada) -->
+            <div class="help-card">
+                <span class="help-icon">💬</span>
+                <h3>Crisis Text Line Canada</h3>
+                <p>Connect with a trained crisis counsellor via text message — no phone call required.</p>
+                <span class="help-number">Text HOME to 741741</span>
+                <p>For anyone in crisis, available Canada-wide.</p>
+                <span class="tag tag-teal">24/7 — Free</span>
+            </div>
+
+            <!-- Distress Centres of Greater Toronto -->
+            <div class="help-card">
+                <span class="help-icon">🏥</span>
+                <h3>Distress Centres of Greater Toronto</h3>
+                <p>Confidential emotional support for anyone in crisis or distress in the Greater Toronto Area.</p>
+                <span class="help-number">416-408-4357</span>
+                <p>Available 24 hours a day, 7 days a week.</p>
+                <span class="tag tag-blue">GTA Area</span>
+            </div>
+
+        </div>
+
+        <!-- ---- Category: Online Mental Health Support ---- -->
+        <h3 class="category-heading">🌐 Online Mental Health Support</h3>
+        <div class="grid-3" style="margin-bottom:48px;">
+
+            <!-- BounceBack -->
+            <div class="help-card">
+                <span class="help-icon">🔄</span>
+                <h3>BounceBack Canada</h3>
+                <p>
+                    A free, guided self-help program delivered over the phone by trained coaches.
+                    Designed for mild-to-moderate anxiety and depression. Available across Canada.
+                </p>
+                <span class="help-number">1-866-345-0224</span>
+                <p>crha.bc.ca/bounceback</p>
+                <span class="tag tag-green">Free — All Ages</span>
+            </div>
+
+            <!-- CAMH -->
+            <div class="help-card">
+                <span class="help-icon">🏛️</span>
+                <h3>CAMH — Information Line</h3>
+                <p>
+                    The Centre for Addiction and Mental Health offers information, referrals,
+                    and an extensive online resource library for anyone affected by mental illness.
+                </p>
+                <span class="help-number">1-800-463-2338</span>
+                <p>camh.ca</p>
+                <span class="tag tag-blue">Referrals — Free</span>
+            </div>
+
+            <!-- Wellness Together Canada -->
+            <div class="help-card">
+                <span class="help-icon">🍁</span>
+                <h3>Wellness Together Canada</h3>
+                <p>
+                    Free mental health and substance use supports for Canadians. Includes
+                    peer support, self-guided programs, and connections to professional
+                    counsellors — online and by phone.
+                </p>
+                <span class="help-number">1-866-585-0445</span>
+                <p>wellnesstogether.ca</p>
+                <span class="tag tag-green">Free — All Ages</span>
+            </div>
+
+        </div>
+
+        <!-- ---- Category: Cyberbullying & Online Safety ---- -->
+        <h3 class="category-heading">🛡️ Cyberbullying &amp; Online Safety</h3>
+        <div class="grid-3" style="margin-bottom:48px;">
+
+            <!-- Cybertip.ca -->
+            <div class="help-card">
+                <span class="help-icon">🔒</span>
+                <h3>Cybertip.ca</h3>
+                <p>
+                    Canada's national tipline for reporting online sexual exploitation of children
+                    and youth. Also provides resources for parents and educators on internet safety.
+                </p>
+                <span class="help-number">cybertip.ca</span>
+                <p>Report online 24/7.</p>
+                <span class="tag tag-red">Report Online Harm</span>
+            </div>
+
+            <!-- MediaSmarts -->
+            <div class="help-card">
+                <span class="help-icon">📚</span>
+                <h3>MediaSmarts Canada</h3>
+                <p>
+                    Canada's centre for digital and media literacy. Provides free resources,
+                    quizzes, lesson plans, and guides on cyberbullying, privacy, and healthy
+                    digital habits for youth, parents, and educators.
+                </p>
+                <span class="help-number">mediasmarts.ca</span>
+                <p>Available in English and French.</p>
+                <span class="tag tag-blue">Education — Free</span>
+            </div>
+
+            <!-- PREVNet -->
+            <div class="help-card">
+                <span class="help-icon">🤝</span>
+                <h3>PREVNet</h3>
+                <p>
+                    The Promoting Relationships and Eliminating Violence Network connects families,
+                    educators, and communities with evidence-based tools to stop bullying and
+                    cyberbullying before it starts.
+                </p>
+                <span class="help-number">prevnet.ca</span>
+                <p>Research-based resources for all ages.</p>
+                <span class="tag tag-purple">Prevention</span>
+            </div>
+
+        </div>
+
+        <!-- ---- Category: Self-Help & Wellbeing Tools ---- -->
+        <h3 class="category-heading">🧘 Self-Help &amp; Wellbeing</h3>
+        <div class="grid-3" style="margin-bottom:0;">
+
+            <!-- MedlinePlus -->
+            <div class="help-card">
+                <span class="help-icon">🏥</span>
+                <h3>MedlinePlus — Mental Health</h3>
+                <p>
+                    Trusted health information from the U.S. National Library of Medicine.
+                    Provides plain-language guides on improving mental health, managing
+                    anxiety, sleep tips, and finding local services.
+                </p>
+                <span class="help-number">medlineplus.gov</span>
+                <p>Free online resource library.</p>
+                <span class="tag tag-blue">Information</span>
+            </div>
+
+            <!-- Headspace -->
+            <div class="help-card">
+                <span class="help-icon">🧠</span>
+                <h3>Headspace</h3>
+                <p>
+                    A meditation and mindfulness app with courses for beginners, anxiety
+                    management, focus, and sleep. Studies show 10 minutes of daily mindfulness
+                    reduces anxiety scores within two weeks.
+                </p>
+                <span class="help-number">headspace.com</span>
+                <p>Free trial available; student discounts offered.</p>
+                <span class="tag tag-purple">App — Freemium</span>
+            </div>
+
+            <!-- Centre for Addiction and Mental Health (CAMH) Youth) -->
+            <div class="help-card">
+                <span class="help-icon">📖</span>
+                <h3>Here to Help BC</h3>
+                <p>
+                    A project of seven BC mental health and substance use non-profits.
+                    Offers free self-assessment tools, personal stories, fact sheets,
+                    and guides on digital health and screen-time concerns.
+                </p>
+                <span class="help-number">heretohelp.bc.ca</span>
+                <p>Free — available across Canada.</p>
+                <span class="tag tag-green">Free Resources</span>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     HOW TO SUPPORT A FRIEND SECTION
+     Accordion dropdown with guidance on helping others
+     ============================================================ -->
+<section class="section" aria-labelledby="support-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="support-heading">How to Support a Friend</h2>
+            <div class="section-divider"></div>
+            <p>
+                Recognising when someone needs help — and knowing how to respond —
+                can make a life-changing difference. Expand each section for guidance.
+            </p>
+        </div>
+
+        <!-- Accordion group for friend support guidance -->
+        <div class="accordion-group" style="max-width:760px; margin:0 auto;">
+
+            <!-- Warning signs -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>⚠️ &nbsp; Warning Signs to Watch For</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>Be aware of these behavioural changes in friends or family members:</p>
+                    <ul>
+                        <li>Withdrawing from in-person social activities they previously enjoyed</li>
+                        <li>Expressing hopelessness, worthlessness, or persistent sadness</li>
+                        <li>Significant changes in sleep patterns — sleeping much more or much less</li>
+                        <li>Visible distress after using their phone or checking social media</li>
+                        <li>Declining school or work performance alongside increased screen time</li>
+                        <li>Talking about feeling bullied, isolated, or excluded online</li>
+                        <li>Any talk of self-harm or suicidal thoughts — always take this seriously</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- How to start a conversation -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>💬 &nbsp; How to Start the Conversation</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <p>
+                        Approaching someone about mental health concerns requires care. Useful approaches include:
+                    </p>
+                    <ul>
+                        <li>Choose a private, calm setting — not in front of others.</li>
+                        <li>Use "I" statements: "I've noticed you seem stressed lately — I care about you."</li>
+                        <li>Ask open questions: "How have you been feeling lately?" rather than "Are you okay?"</li>
+                        <li>Listen actively. Do not rush to offer solutions — being heard is often the most helpful first step.</li>
+                        <li>Avoid dismissing their feelings with phrases like "just delete the app" or "stop being sad."</li>
+                        <li>Let them know specific resources exist (this page) and offer to help them access support.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- What NOT to do -->
+            <div class="accordion">
+                <button class="accordion-header" aria-expanded="false">
+                    <span>🚫 &nbsp; What Not to Do</span>
+                    <span class="acc-icon">+</span>
+                </button>
+                <div class="accordion-body">
+                    <ul>
+                        <li>Do not promise to keep suicidal thoughts or self-harm secret — safety comes first.</li>
+                        <li>Do not shame someone for struggling. Mental health difficulties are not a choice or a weakness.</li>
+                        <li>Do not attempt to diagnose or minimise the problem.</li>
+                        <li>Do not abandon the conversation if they push back — persistence shows genuine care.</li>
+                        <li>Do not wait for a "better time" if someone appears to be in immediate distress.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SITE FOOTER
+     ============================================================ -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+        <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="issues.html">The Issues</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="help.html">Get Help</a></li>
+            <li><a href="game.html">Mind Guard</a></li>
+            <li><a href="sources.html">Works Cited</a></li>
+        </ul>
+        <p>Mind Matters &mdash; ICS3U Digital Issues Website &mdash; 2025</p>
+        <p style="margin-top:6px; font-size:0.80rem;">
+            If you are in crisis, contact the Kids Help Phone: <strong>1-800-668-6868</strong>
+        </p>
+    </div>
+</footer>
+
+
+<!-- Tip bar -->
+<div id="tip-bar" role="complementary" aria-label="Wellness tip">
+    <span class="tip-text">
+        💡 <strong>Remember:</strong> Asking for help is a sign of strength. Every crisis line on this page is free, confidential, and staffed by trained professionals.
+    </span>
+    <button id="tip-bar-close" aria-label="Dismiss tip">✕</button>
+</div>
+
+
+<script src="js/main.js"></script>
+</body>
+</html>

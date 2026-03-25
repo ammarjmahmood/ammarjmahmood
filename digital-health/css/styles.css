@@ -1,0 +1,1092 @@
+/*
+ * styles.css
+ * Main stylesheet for "Mind Matters: Digital Health & You"
+ * Covers layout, typography, colour palette, animations,
+ * navigation, cards, hero sections, and all page-specific styles.
+ *
+ * Colour Palette:
+ *   --navy      #1B2A4A   Primary dark (header, footer)
+ *   --blue      #2F7FC1   Primary accent
+ *   --teal      #38B2AC   Secondary accent / positive
+ *   --red       #E53E3E   Warning / negative
+ *   --light     #F0F4F8   Page background
+ *   --white     #FFFFFF   Cards, panels
+ *   --text      #2D3748   Body text
+ *   --muted     #718096   Subdued text
+ */
+
+/* ============================================================
+   CSS Custom Properties (Variables)
+   ============================================================ */
+:root {
+    --navy:       #1B2A4A;
+    --navy-light: #253A63;
+    --blue:       #2F7FC1;
+    --blue-light: #4A9FD4;
+    --teal:       #38B2AC;
+    --teal-light: #4FD1CB;
+    --red:        #E53E3E;
+    --red-light:  #FC8181;
+    --green:      #38A169;
+    --yellow:     #D69E2E;
+    --purple:     #805AD5;
+    --light:      #F0F4F8;
+    --white:      #FFFFFF;
+    --text:       #2D3748;
+    --muted:      #718096;
+    --border:     #CBD5E0;
+    --shadow:     0 4px 20px rgba(0,0,0,0.10);
+    --shadow-lg:  0 8px 40px rgba(0,0,0,0.16);
+    --radius:     12px;
+    --radius-sm:  8px;
+    --transition: 0.3s ease;
+}
+
+/* ============================================================
+   Reset & Base
+   ============================================================ */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--light);
+    color: var(--text);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--teal);
+}
+
+ul {
+    list-style: none;
+}
+
+/* ============================================================
+   Typography
+   ============================================================ */
+h1, h2, h3, h4, h5 {
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.3;
+}
+
+h1 { font-size: 2.8rem; }
+h2 { font-size: 2.1rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+h5 { font-size: 1.0rem; }
+
+p {
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.text-muted { color: var(--muted); }
+.text-center { text-align: center; }
+.text-white  { color: var(--white); }
+
+/* ============================================================
+   Layout Utilities
+   ============================================================ */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.section {
+    padding: 72px 0;
+}
+
+.section-sm {
+    padding: 40px 0;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gap-16 { gap: 16px; }
+.gap-24 { gap: 24px; }
+
+.mb-8  { margin-bottom: 8px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.mb-40 { margin-bottom: 40px; }
+
+/* ============================================================
+   Navigation
+   ============================================================ */
+.site-header {
+    background: var(--navy);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.25);
+}
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+}
+
+/* Site logo / brand */
+.nav-logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-logo span {
+    color: var(--teal);
+}
+
+/* Navigation links list */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-links li a {
+    color: rgba(255,255,255,0.80);
+    font-size: 0.92rem;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), color var(--transition);
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* Mouseover effect: expanding underline on nav links */
+.nav-links li a::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--teal);
+    border-radius: 2px;
+    transition: width var(--transition), left var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--white);
+    background: rgba(255,255,255,0.08);
+}
+
+.nav-links li a:hover::after {
+    width: 60%;
+    left: 20%;
+}
+
+/* Active page highlight */
+.nav-links li a.active {
+    color: var(--white);
+    background: rgba(56, 178, 172, 0.20);
+}
+
+.nav-links li a.active::after {
+    width: 60%;
+    left: 20%;
+    background: var(--teal);
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+.btn-primary {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--blue-light);
+    color: var(--white);
+}
+
+.btn-teal {
+    background: var(--teal);
+    color: var(--white);
+}
+
+.btn-teal:hover {
+    background: var(--teal-light);
+    color: var(--white);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--navy);
+}
+
+/* ============================================================
+   Cards
+   ============================================================ */
+.card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+/* Mouseover effect: lift cards on hover */
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-icon {
+    font-size: 2.4rem;
+    margin-bottom: 14px;
+    display: block;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.65;
+}
+
+/* Flip card variant used on issues page */
+.flip-card {
+    perspective: 1200px;
+    height: 260px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.65s;
+    transform-style: preserve-3d;
+}
+
+/* Mouseover effect: flip card on hover */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+
+.flip-front {
+    background: var(--white);
+}
+
+.flip-back {
+    background: var(--navy);
+    color: var(--white);
+    transform: rotateY(180deg);
+}
+
+.flip-back p {
+    color: rgba(255,255,255,0.85);
+    font-size: 0.90rem;
+    line-height: 1.6;
+}
+
+.flip-back .flip-stat {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--teal);
+    margin-bottom: 8px;
+}
+
+/* ============================================================
+   Hero Sections
+   ============================================================ */
+.hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 60%, #1a3a5c 100%);
+    color: var(--white);
+    padding: 100px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+    line-height: 1.15;
+}
+
+.hero h1 span {
+    color: var(--teal);
+}
+
+.hero p.lead {
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.80);
+    max-width: 680px;
+    margin: 0 auto 36px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Animated circles in hero background */
+.hero-bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.04);
+    animation: floatCircle 8s ease-in-out infinite;
+}
+
+.hero-bg-circle:nth-child(1) { width: 300px; height: 300px; top: -80px; right: -60px; animation-delay: 0s; }
+.hero-bg-circle:nth-child(2) { width: 200px; height: 200px; bottom: -50px; left: -40px; animation-delay: 2s; }
+.hero-bg-circle:nth-child(3) { width: 150px; height: 150px; top: 40%; left: 15%; animation-delay: 4s; }
+
+@keyframes floatCircle {
+    0%, 100% { transform: translateY(0px) scale(1); }
+    50%       { transform: translateY(-24px) scale(1.05); }
+}
+
+/* Inner hero (used on sub-pages) */
+.hero-inner {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-inner h1 {
+    color: var(--white);
+    font-size: 2.4rem;
+    margin-bottom: 12px;
+}
+
+.hero-inner p {
+    color: rgba(255,255,255,0.75);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   Section Headers
+   ============================================================ */
+.section-header {
+    text-align: center;
+    margin-bottom: 52px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.section-header p {
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-divider {
+    width: 60px;
+    height: 4px;
+    background: var(--teal);
+    border-radius: 2px;
+    margin: 14px auto 16px;
+}
+
+/* ============================================================
+   Stat Badges
+   ============================================================ */
+.stat-row {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 48px;
+}
+
+.stat-badge {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px 32px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    flex: 1;
+    min-width: 180px;
+    max-width: 240px;
+    border-top: 4px solid var(--teal);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+/* Mouseover effect: stat badges lift on hover */
+.stat-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-badge .stat-number {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-badge .stat-label {
+    font-size: 0.85rem;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.stat-badge.danger { border-top-color: var(--red); }
+.stat-badge.warning { border-top-color: var(--yellow); }
+.stat-badge.success { border-top-color: var(--green); }
+
+/* ============================================================
+   Tag/Label Pills
+   ============================================================ */
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 10px;
+}
+
+.tag-red    { background: #FED7D7; color: #C53030; }
+.tag-teal   { background: #B2F5EA; color: #234E52; }
+.tag-blue   { background: #BEE3F8; color: #2A4365; }
+.tag-purple { background: #E9D8FD; color: #44337A; }
+.tag-green  { background: #C6F6D5; color: #22543D; }
+.tag-yellow { background: #FEFCBF; color: #744210; }
+
+/* ============================================================
+   Alert / Callout Boxes
+   ============================================================ */
+.callout {
+    border-left: 5px solid var(--blue);
+    background: #EBF8FF;
+    padding: 20px 24px;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    margin: 24px 0;
+}
+
+.callout.danger {
+    border-left-color: var(--red);
+    background: #FFF5F5;
+}
+
+.callout.success {
+    border-left-color: var(--green);
+    background: #F0FFF4;
+}
+
+.callout.warning {
+    border-left-color: var(--yellow);
+    background: #FFFFF0;
+}
+
+.callout-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    color: var(--navy);
+}
+
+.callout p {
+    margin: 0;
+    font-size: 0.93rem;
+    color: var(--text);
+}
+
+/* ============================================================
+   Progress Bar (visual stats)
+   ============================================================ */
+.progress-group {
+    margin-bottom: 20px;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.progress-bar-track {
+    height: 10px;
+    background: #E2E8F0;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 100px;
+    background: var(--blue);
+    transition: width 1.2s ease;
+}
+
+.progress-bar-fill.red    { background: var(--red); }
+.progress-bar-fill.teal   { background: var(--teal); }
+.progress-bar-fill.purple { background: var(--purple); }
+.progress-bar-fill.yellow { background: var(--yellow); }
+
+/* ============================================================
+   Video Embed
+   ============================================================ */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* ============================================================
+   Accordion / Dropdown (Challenge Feature #2 - dropdown)
+   ============================================================ */
+.accordion {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    margin-bottom: 12px;
+}
+
+.accordion-header {
+    background: var(--white);
+    border: none;
+    width: 100%;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--navy);
+    cursor: pointer;
+    transition: background var(--transition);
+    text-align: left;
+}
+
+.accordion-header:hover {
+    background: #EBF8FF;
+}
+
+.accordion-header .acc-icon {
+    font-size: 1.2rem;
+    transition: transform var(--transition);
+    color: var(--teal);
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+.accordion-header.open .acc-icon {
+    transform: rotate(45deg);
+}
+
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    background: var(--white);
+    transition: max-height 0.45s ease, padding 0.3s ease;
+    padding: 0 24px;
+    border-top: 1px solid #E2E8F0;
+}
+
+.accordion-body.open {
+    max-height: 500px;
+    padding: 20px 24px;
+}
+
+.accordion-body p, .accordion-body li {
+    font-size: 0.93rem;
+    color: var(--text);
+}
+
+.accordion-body ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 8px;
+}
+
+/* ============================================================
+   Help / Resource Cards
+   ============================================================ */
+.help-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 32px;
+    box-shadow: var(--shadow);
+    border-top: 5px solid var(--teal);
+    text-align: center;
+    transition: transform var(--transition), box-shadow var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Mouseover effect: help card — coloured overlay */
+.help-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(56,178,172,0.06), transparent);
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.help-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+.help-card:hover::before {
+    opacity: 1;
+}
+
+.help-card .help-icon {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.help-card h3 {
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.help-card .help-number {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--teal);
+    margin: 10px 0;
+    display: block;
+}
+
+.help-card p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+/* ============================================================
+   Solutions List
+   ============================================================ */
+.solution-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background: var(--white);
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition), box-shadow var(--transition);
+    margin-bottom: 16px;
+}
+
+/* Mouseover: solution items slide-highlight */
+.solution-item:hover {
+    transform: translateX(6px);
+    box-shadow: var(--shadow-lg);
+    border-left: 4px solid var(--teal);
+}
+
+.solution-num {
+    background: var(--teal);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 1.2rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.solution-content h4 {
+    margin-bottom: 6px;
+    font-size: 1.05rem;
+}
+
+.solution-content p {
+    margin: 0;
+    font-size: 0.90rem;
+    color: var(--muted);
+}
+
+/* ============================================================
+   Game Section (Challenge Feature #1 — Widget)
+   ============================================================ */
+#game-canvas {
+    display: block;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+    cursor: crosshair;
+    max-width: 100%;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.game-hud {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 640px;
+}
+
+.hud-item {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 12px 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    flex: 1;
+    min-width: 110px;
+}
+
+.hud-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 4px;
+}
+
+.hud-value {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--navy);
+}
+
+.hud-value.health { color: var(--red); }
+.hud-value.score  { color: var(--teal); }
+.hud-value.level  { color: var(--purple); }
+
+/* ============================================================
+   Works Cited / Sources Page
+   ============================================================ */
+.source-list {
+    counter-reset: source-counter;
+}
+
+.source-item {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 20px 24px 20px 72px;
+    box-shadow: var(--shadow);
+    margin-bottom: 14px;
+    position: relative;
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.source-item:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.source-item::before {
+    counter-increment: source-counter;
+    content: counter(source-counter);
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--navy);
+    color: var(--white);
+    font-weight: 800;
+    font-size: 0.9rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.source-item p {
+    margin: 0;
+    font-size: 0.90rem;
+}
+
+.source-item a {
+    font-size: 0.85rem;
+    word-break: break-all;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.65);
+    padding: 40px 0 28px;
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+.site-footer a {
+    color: var(--teal);
+}
+
+.site-footer .footer-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.site-footer .footer-links a {
+    transition: color var(--transition);
+}
+
+.site-footer .footer-links a:hover {
+    color: var(--white);
+}
+
+/* ============================================================
+   Highlight Band
+   ============================================================ */
+.band {
+    padding: 56px 0;
+    text-align: center;
+}
+
+.band-dark {
+    background: var(--navy);
+}
+
+.band-dark h2 {
+    color: var(--white);
+    margin-bottom: 12px;
+}
+
+.band-dark p {
+    color: rgba(255,255,255,0.70);
+    max-width: 600px;
+    margin: 0 auto 28px;
+}
+
+.band-teal {
+    background: var(--teal);
+}
+
+.band-teal h2 {
+    color: var(--white);
+}
+
+.band-teal p {
+    color: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin: 0 auto 28px;
+}
+
+/* ============================================================
+   Inline SVG Chart Styles
+   ============================================================ */
+.chart-container {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 28px;
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.chart-container h4 {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: var(--navy);
+}
+
+/* ============================================================
+   Floating Scroll-down Arrow on Hero
+   ============================================================ */
+.scroll-indicator {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s ease-in-out infinite;
+    color: rgba(255,255,255,0.5);
+    font-size: 1.6rem;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%       { transform: translateX(-50%) translateY(10px); }
+}
+
+/* ============================================================
+   Sticky tip bar (scrolls with page, fixed to bottom)
+   ============================================================ */
+#tip-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    color: var(--white);
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    z-index: 900;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    box-shadow: 0 -4px 16px rgba(0,0,0,0.2);
+}
+
+#tip-bar.visible {
+    transform: translateY(0);
+}
+
+#tip-bar .tip-text {
+    color: rgba(255,255,255,0.85);
+}
+
+#tip-bar .tip-text strong {
+    color: var(--teal);
+}
+
+#tip-bar button {
+    background: transparent;
+    border: none;
+    color: rgba(255,255,255,0.5);
+    cursor: pointer;
+    font-size: 1.1rem;
+    padding: 4px 8px;
+    transition: color var(--transition);
+}
+
+#tip-bar button:hover {
+    color: var(--white);
+}

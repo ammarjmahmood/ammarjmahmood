@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<!--
+    index.html
+    Mind Matters: Digital Health & You
+    Main landing page — introduces the topic, key statistics, and navigation
+    to deeper content across the site.
+
+    Author  : Ammar Mahmood
+    Course  : ICS3U
+    Date    : March 2025
+    Topic   : Mental and Emotional Health Concerns Related to Digital Technology
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Matters | Digital Health &amp; You</title>
+    <!-- Main stylesheet shared across all pages -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     SITE HEADER & NAVIGATION
+     Sticky navigation bar with links to all pages.
+     Active page is highlighted via JavaScript in main.js.
+     ============================================================ -->
+<header class="site-header">
+    <div class="container">
+        <nav class="nav-inner" aria-label="Main navigation">
+            <!-- Site logo -->
+            <a href="index.html" class="nav-logo" aria-label="Mind Matters home">
+                🧠 Mind<span>Matters</span>
+            </a>
+
+            <!-- Page links — mouseover underline effect applied in styles.css -->
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="issues.html">The Issues</a></li>
+                <li><a href="solutions.html">Solutions</a></li>
+                <li><a href="help.html">Get Help</a></li>
+                <li><a href="game.html">Mind Guard</a></li>
+                <li><a href="sources.html">Works Cited</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+<!-- ============================================================
+     HERO SECTION
+     Animated gradient background with floating decorative circles
+     ============================================================ -->
+<section class="hero" aria-label="Hero banner">
+    <!-- Decorative animated background circles (CSS animation) -->
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle"></div>
+    <div class="hero-bg-circle"></div>
+
+    <div class="container" style="position:relative; z-index:2;">
+        <!-- Eyebrow label -->
+        <span class="tag tag-teal" style="margin-bottom:20px;">Digital Health Awareness</span>
+
+        <h1>The Digital Age is <span>Reshaping</span> Mental Health</h1>
+        <p class="lead">
+            Billions of people spend hours each day on screens — and research is
+            revealing a measurable cost to their wellbeing. Explore the evidence,
+            understand the risks, and discover what individuals can do about it.
+        </p>
+
+        <!-- Call-to-action buttons -->
+        <div class="hero-buttons">
+            <a href="issues.html" class="btn btn-teal">Explore the Issues</a>
+            <a href="solutions.html" class="btn btn-outline">Find Solutions</a>
+        </div>
+    </div>
+
+    <!-- Animated bounce arrow pointing down -->
+    <a href="#overview" class="scroll-indicator" aria-label="Scroll down">&#8964;</a>
+</section>
+
+
+<!-- ============================================================
+     OVERVIEW — KEY STATISTICS
+     High-level stat badges that introduce the scale of the problem.
+     These figures are sourced from Statistics Canada and peer-reviewed
+     literature (see sources.html for full citations).
+     ============================================================ -->
+<section class="section" id="overview" aria-labelledby="stats-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="stats-heading">The Numbers Behind the Problem</h2>
+            <div class="section-divider"></div>
+            <p>
+                These statistics from Statistics Canada and peer-reviewed research
+                illustrate the scale of the issue facing Canadians today.
+            </p>
+        </div>
+
+        <!-- Stat badges — hover effect defined in styles.css -->
+        <div class="stat-row">
+            <div class="stat-badge danger">
+                <div class="stat-number">70%</div>
+                <div class="stat-label">More likely to have suicidal thoughts — teens using screens 5+ hours daily vs. under 1 hour</div>
+            </div>
+            <div class="stat-badge warning">
+                <div class="stat-number">11%</div>
+                <div class="stat-label">of Canadian adolescents show signs of problematic social media use</div>
+            </div>
+            <div class="stat-badge danger">
+                <div class="stat-number">4.8 hrs</div>
+                <div class="stat-label">Average daily recreational screen time for Canadian youth aged 12–17</div>
+            </div>
+            <div class="stat-badge success">
+                <div class="stat-number">63%</div>
+                <div class="stat-label">of adults report feeling better after limiting social media to 30 min/day</div>
+            </div>
+        </div>
+
+        <!-- Brief explainer text below stats -->
+        <div class="callout warning">
+            <p class="callout-title">Why This Matters</p>
+            <p>
+                Mental health conditions are the leading cause of disability in Canada. Digital technology —
+                when used without intention or limits — is increasingly recognised as a contributing factor,
+                particularly for adolescents aged 12–17. The good news is that targeted individual actions
+                can meaningfully reduce these risks.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     TOPIC PREVIEW CARDS
+     Brief introduction to each section of the website.
+     ============================================================ -->
+<section class="section" style="background: var(--white); padding-top: 0;" aria-labelledby="explore-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="explore-heading">What You Will Find Here</h2>
+            <div class="section-divider"></div>
+            <p>Navigate the site using the menu above or the cards below.</p>
+        </div>
+
+        <!-- Preview cards — lift effect on hover defined in styles.css -->
+        <div class="grid-3">
+
+            <!-- Card: The Issues -->
+            <div class="card">
+                <span class="card-icon">⚠️</span>
+                <h3 class="card-title">The Issues</h3>
+                <p class="card-text">
+                    An in-depth look at anxiety, depression, cyberbullying, sleep disruption,
+                    social comparison, and addictive design — all linked to digital habits.
+                </p>
+                <a href="issues.html" class="btn btn-primary" style="margin-top:18px;">Read More</a>
+            </div>
+
+            <!-- Card: Solutions -->
+            <div class="card">
+                <span class="card-icon">✅</span>
+                <h3 class="card-title">Individual Solutions</h3>
+                <p class="card-text">
+                    Practical, evidence-based steps that any individual can take to protect
+                    their mental health in a digital world — without giving up technology entirely.
+                </p>
+                <a href="solutions.html" class="btn btn-teal" style="margin-top:18px;">Explore Solutions</a>
+            </div>
+
+            <!-- Card: Get Help -->
+            <div class="card">
+                <span class="card-icon">🤝</span>
+                <h3 class="card-title">Get Help</h3>
+                <p class="card-text">
+                    Real Canadian resources — crisis lines, counselling directories, and
+                    self-help tools — for those who need support right now or want to
+                    learn more.
+                </p>
+                <a href="help.html" class="btn btn-primary" style="margin-top:18px;">Find Resources</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     VIDEO SECTION
+     Embedded documentary excerpt about social media and mental health.
+     This clip is from "The Social Dilemma" trailer — a Netflix
+     documentary that examines how social media is designed to
+     be addictive and its effects on mental health.
+     ============================================================ -->
+<section class="section" aria-labelledby="video-heading">
+    <div class="container">
+        <div class="section-header">
+            <h2 id="video-heading">Designed to Addict</h2>
+            <div class="section-divider"></div>
+            <p>
+                The Social Dilemma (2020) features technology insiders explaining
+                how social media platforms are engineered to maximise engagement —
+                often at the expense of user wellbeing.
+            </p>
+        </div>
+
+        <div class="grid-2">
+            <!-- Embedded YouTube video -->
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/uaaC57tcci0"
+                    title="The Social Dilemma — Official Trailer (Netflix)"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <!-- Companion text -->
+            <div>
+                <span class="tag tag-red">Must Watch</span>
+                <h3 style="margin-bottom:14px;">The Social Dilemma (2020)</h3>
+                <p>
+                    This Netflix documentary interviews the engineers and executives
+                    who built social media platforms — and who are now sounding the
+                    alarm about what they created.
+                </p>
+                <p>
+                    Key takeaways include:
+                </p>
+                <!-- Accessible unordered list of key points -->
+                <ul style="list-style:disc; padding-left:20px; color:var(--text); font-size:0.92rem; line-height:1.8;">
+                    <li>Social media platforms are designed using the same psychological techniques as slot machines.</li>
+                    <li>Recommendation algorithms prioritise outrage and anxiety because they drive engagement.</li>
+                    <li>Rates of teen depression, anxiety, and self-harm have risen sharply since 2012 — the year smartphones became widespread.</li>
+                    <li>Many of the engineers who built these platforms restrict their own children's screen time.</li>
+                </ul>
+
+                <div class="callout" style="margin-top:20px;">
+                    <p class="callout-title">Available on Netflix</p>
+                    <p>The full documentary is available on Netflix. It is recommended for anyone seeking to understand the root causes of digital mental health concerns.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     DARK CALL-TO-ACTION BAND
+     Encourages users to take the interactive quiz / game.
+     ============================================================ -->
+<div class="band band-dark" aria-label="Game promotion">
+    <div class="container">
+        <h2>Test Your Habits: Play Mind Guard</h2>
+        <p>
+            Catch healthy habits and dodge harmful digital behaviours in this
+            interactive game. How long can your mental health last?
+        </p>
+        <a href="game.html" class="btn btn-teal">Play Now</a>
+    </div>
+</div>
+
+
+<!-- ============================================================
+     SITE FOOTER
+     ============================================================ -->
+<footer class="site-footer" aria-label="Site footer">
+    <div class="container">
+        <!-- Footer navigation links -->
+        <ul class="footer-links" aria-label="Footer navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="issues.html">The Issues</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+            <li><a href="help.html">Get Help</a></li>
+            <li><a href="game.html">Mind Guard</a></li>
+            <li><a href="sources.html">Works Cited</a></li>
+        </ul>
+        <p>Mind Matters &mdash; ICS3U Digital Issues Website &mdash; 2025</p>
+        <p style="margin-top:6px; font-size:0.80rem;">
+            If you are in crisis, contact the Kids Help Phone: <strong>1-800-668-6868</strong>
+        </p>
+    </div>
+</footer>
+
+
+<!-- ============================================================
+     STICKY TIP BAR (appears after scrolling 400px)
+     Challenge Feature: element that follows user as they scroll
+     ============================================================ -->
+<div id="tip-bar" role="complementary" aria-label="Wellness tip">
+    <span class="tip-text">
+        💡 <strong>Tip:</strong> Setting a consistent bedtime screen-off rule can improve sleep quality within just one week.
+    </span>
+    <button id="tip-bar-close" aria-label="Dismiss tip">✕</button>
+</div>
+
+
+<!-- Shared JavaScript — nav highlighting, accordions, progress bars, tip bar -->
+<script src="js/main.js"></script>
+</body>
+</html>
