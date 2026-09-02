@@ -1,7 +1,7 @@
 <div align="center">
 
 <div align="center">
-  <a href="https://linkedin.com/in/ammar-mahmood"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"/></a>
+  <a href="https://www.linkedin.com/in/ammarjmahmood/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&amp;logo=linkedin&amp;logoColor=white"/></a>
   <a href="mailto:ammarjmahmood@gmail.com"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&amp;logo=gmail&amp;logoColor=white"/></a>
   <a href="https://ammarjmahmood.me"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&amp;logo=vercel&amp;logoColor=white"/></a>
   <img src="https://komarev.com/ghpvc/?username=ammarjmahmood&amp;style=for-the-badge&amp;color=blueviolet" alt="Profile Views"/>
